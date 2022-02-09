@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="timer"></div>
+    <div class="mark-ques">
+        <div class="question">
+            <div class="noOfQuestion">
+            </div>
+            <div class="overlay">
+
+                <div class="ques">
+                    <i class="fas fa-question-circle"></i>
+                    <p id="question"></p>
+                </div>
+                <div class="bodyOfQuestion">
+                </div>
+                <button class="submitQues" onclick="submitQues()">Submit Question</button>
+                <div class="actions">
+                    <button class="submit" onclick="getResult()">Get Result</button>
+                    <button class="previos" onclick="previos()"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next" onclick="next()"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="mark" id="markSection">
+            <div class="time"><i class="fas fa-clock"></i>
+                <div id="time"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="Examscript.js"></script>
+</body>
+
+</html>

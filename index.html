@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="image">
+            <img src="online-exam.jpg">
+        </div>
+        <div class="form">
+            <h1>Registeration</h1>
+            <div class="input">
+                <label for="firstName">Enter First Name</label>
+                <input type="text" name="firstName" placeholder="First Name" id="fname" required>
+                <p id="hint1"></p>
+            </div>
+            <div class="input">
+                <label for="lastName">Enter Last Name</label>
+                <input type="text" name="lastName" placeholder="Last Name" id="lname" required>
+                <p id="hint2"></p>
+            </div>
+            <div class="input">
+                <label for="email">Enter Your Email</label>
+                <input type="email" name="email" placeholder="Email" id="email" required>
+                <p id="hint3"></p>
+            </div>
+            <div class="input">
+                <label for="password">Enter Your Password</label>
+                <input type="password" name="password" placeholder="Password" id="pass" required>
+                <p id="hint4"></p>
+            </div>
+            <div class="input">
+                <label for="rePassword">Confirm Password</label>
+                <input type="password" name="rePassword" placeholder="Re-Enter Password" id="rePass" required>
+                <p id="hint5"></p>
+            </div>
+
+            <div class="input">
+                <button class="register" onclick="validation()">Register</button>
+                <div class="remember">
+                    <!-- <input type="checkbox" id="rememberMe" name="rememberMe" value="Remember Me"> -->
+                    <!-- <span>Remember Me</span> -->
+                    <!-- <a href="login.html">I already have acount</a> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

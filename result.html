@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color:#ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resAll">
+        <h1 style="text-align: center;"></h1>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        function getCookie(key) {
+            var res = "";
+            var data = document.cookie;
+            var arr = data.split("; ");
+            arr.forEach(function (el) {
+                var keyAndValue = el.split("=");
+                if (keyAndValue[0] === key) {
+                    res = keyAndValue[1];
+                }
+
+            })
+            return res;
+
+        }
+        var x = sessionStorage.getItem("result");
+        document.getElementsByTagName("h1")[0].innerHTML = "Hello " + getCookie("fName") + " Your Result";
+        if (x === null) {
+            document.getElementById("result").innerHTML = '0%';
+        } else if(x >=10){
+            document.getElementById("result").innerHTML ='100%';
+            document.body.style.backgroundImage="url(win.png)";
+
+        }
+        else if(x>6 && x<=10){
+            document.getElementById("result").innerHTML =x+'0%';
+            document.body.style.backgroundImage="url(win.png)";
+        }
+        else{
+            document.getElementById("result").innerHTML =x+'0%';
+        }
+    </script>
+</body>
+
+</html>
