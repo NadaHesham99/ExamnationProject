@@ -13,9 +13,10 @@ var fname = document.getElementById("fname"),
     ValidLname,
     ValidPass,
     ValidEmail,
-    rPass;
+    confirmPass;
+
 function validation() {
-    if (ValidFname === undefined || ValidLname === undefined || ValidPass === undefined || ValidEmail === undefined) {
+    if (ValidFname === undefined || ValidLname === undefined || ValidPass === undefined || ValidEmail === undefined || confirmPass === undefined) {
 
         var inpFname = fname.value;
         var hint1 = document.getElementById("hint1");
@@ -71,9 +72,15 @@ function validation() {
             hint4.style.display = "none";
             ValidPass = inpvalPass;
         }
-
-        if (rePass.value !== inpvalPass) {
+        var rPass = rePass.value;
+        if (rPass !== inpvalPass) {
             document.getElementById("hint5").textContent = "Password must be matched";
+        } else if (rPass === "") {
+            document.getElementById("hint5").textContent = "required";
+        } else {
+            confirmPass = inpvalPass;
+            document.getElementById("hint5").style.display ="none";
+
         }
     } else {
         window.location.replace("login.html")
@@ -106,25 +113,22 @@ function getCookie(key) {
     return res;
 
 }
-// if(getCookie("email")!== "not found" && getCookie("password")!== "not found"){
-//     loginEmail.value = getCookie("email");
-//     loginEmail.value = getCookie("password");
-// }
 function deleteCookie(key) {
     document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-function goExam() {
+function goInstruction() {
     if (loginEmail.value === getCookie("email") && loginPassword.value === getCookie("password")) {
-        window.location.replace("exam.html");
+        window.location.replace("instruction.html");
         document.getElementById("logHint").style.display = "none";
     }
     else {
-        // console.log("error");
         document.getElementById("logHint").textContent = "Email or Password is incorrect";
     }
 }
-
+function goToExam() {
+    window.location.replace("exam.html");
+}
 
 
 

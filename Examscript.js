@@ -270,6 +270,7 @@ function gotoQues(e) {
     document.getElementById("timer").style.width = e.textContent + '0%';
     console.log(e.textContent);
     console.log(noOfQues);
+    saveActive(noOfQues);
 }
 var allMark = [];
 function markFun(e) {
@@ -305,6 +306,7 @@ function submitQues() {
     if (noOfQues >= AllQuestion.length - 1) {
         sessionStorage.setItem("result", result);
     }
+    console.log(randomArray[noOfQues]);
 }
 
 function getResult() {
